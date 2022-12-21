@@ -11,13 +11,13 @@ const Questions = () => {
     question_type,
     amount_of_question,
    }=useSelector(state=>state)
-   console.log(amount_of_question)
+   console.log(question_category,question_difficulty,question_type,amount_of_question)
 
 
 
     const apiUrl=`/api.php?amount=10`
     const  {response ,error ,loading} =useAxios({url:apiUrl})
-    console.log(response)
+    // console.log(response)
   return (
     <Box>
       <Typography variant="h4">Questions 1</Typography>

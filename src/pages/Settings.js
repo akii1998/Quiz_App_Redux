@@ -1,5 +1,6 @@
 import { Box, Button, CircularProgress, Typography } from "@mui/material";
 import React from "react";
+// import { unstable_HistoryRouter } from "react-router-dom";
 import SelectField from "../components/SelectField";
 import TextFieldComp from "../components/TextFieldComp";
 import useAxios from "../Hooks/useAxios";
@@ -7,6 +8,8 @@ import useAxios from "../Hooks/useAxios";
 const Settings = () => {
   const { response, error, loading } = useAxios({ url: "/api_category.php" });
   // console.log(response);
+
+//   const history=unstable_HistoryRouter()
 
   if (loading) {
     return (
@@ -34,6 +37,8 @@ const Settings = () => {
   ];
   const handleSubmit = (e) => {
     e.preventDefault();
+    // history.push('/questions')
+
   };
   return (
     <form onSubmit={handleSubmit}>
