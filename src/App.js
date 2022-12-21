@@ -1,11 +1,28 @@
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Settings from "./pages/Settings";
+import Questions from "./pages/Questions";
+import FinalScreen from "./pages/FinalScreen";
 
-import './App.css';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Settings/>,
+  },
+  {
+    path: "/questions",
+    element: <Questions />,
+  },
+  {
+    path:'/score',
+    element:<FinalScreen/>
+  }
+]);
 
 function App() {
   return (
     <div className="App">
-   <h1>Hello</h1>
-
+      <RouterProvider router={router} />
     </div>
   );
 }
